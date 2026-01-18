@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Vichy Normaderm Phytosolution | غسول للبشرة الدهنية والحساسة</title>
+  <meta name="description" content="غسول Vichy Normaderm Phytosolution لتنظيف عميق وتقليل الدهون والحبوب. مناسب للبشرة الدهنية والحساسة. منتج أصلي 100%." />
+  <meta name="theme-color" content="#0a7f3f"/>
+
+  <style>
+    :root{
+      --bg0:#f6f7fb;
+      --bg1:#ffffff;
+
+      --card:#ffffff;
+      --card2:#fbfbff;
+
+      --text:#0f172a;
+      --muted:#475569;
+      --muted2:#64748b;
+
+      --stroke: rgba(15,23,42,.10);
+      --stroke2: rgba(15,23,42,.14);
+
+      --brand:#0a7f3f;
+      --brand2:#16a34a;
+
+      --ok:#10b981;
+      --warn:#f59e0b;
+      --danger:#ef4444;
+      --info:#2563eb;
+
+      --radius:18px;
+      --radius2:22px;
+
+      --shadow: 0 18px 60px rgba(2,6,23,.12);
+      --shadow2: 0 10px 26px rgba(2,6,23,.10);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Tahoma, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 520px at 88% -12%, rgba(10,127,63,.14), transparent 60%),
+        radial-gradient(900px 520px at 12% 0%, rgba(16,185,129,.10), transparent 55%),
+        radial-gradient(700px 420px at 60% 110%, rgba(37,99,235,.08), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1) 55%, var(--bg0));
+      overflow-x:hidden;
+    }
+    a{color:inherit}
+    .wrap{max-width:1120px;margin:0 auto;padding:18px}
+
+    /* Header */
+    .topbar{
+      position:static;
+      background: rgba(255,255,255,.90);
+      border:1px solid var(--stroke);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow2);
+      backdrop-filter: blur(10px);
+      margin-top:14px;
+      animation: fadeUp .7s ease both;
+    }
+    .topbar .inner{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+      padding:12px 14px;
+    }
+    .brandBox{display:flex;gap:10px;align-items:center}
+    .logo{
+      width:38px;height:38px;border-radius:14px;
+      display:grid;place-items:center;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#fff;font-weight:900;
+      box-shadow: 0 14px 30px rgba(10,127,63,.22);
+    }
+    .brandText b{display:block}
+    .brandText small{color:var(--muted2)}
+    .metaRow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .pill{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:8px 11px;border-radius:999px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.75);
+      color: var(--muted);
+      font-size:13px;
+      white-space:nowrap;
+    }
+    .pill i{
+      width:18px;height:18px;border-radius:7px;
+      display:inline-grid;place-items:center;
+      font-style:normal;
+      background: rgba(10,127,63,.10);
+      border:1px solid rgba(10,127,63,.18);
+      color: var(--brand);
+      font-size:12px;
+    }
+
+    /* Layout */
+    .hero{
+      margin-top:16px;
+      display:grid;gap:16px;
+      grid-template-columns: 1fr 1fr;
+      align-items:start;
+    }
+    @media(max-width:980px){ .hero{grid-template-columns:1fr} }
+
+    .card{
+      background: var(--card);
+      border:1px solid var(--stroke);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+      animation: fadeUp .85s ease both;
+    }
+    .pad{padding:18px}
+
+    /* Gallery */
+    .gallery{padding:14px}
+    .mainWrap{
+      position:relative;
+      border-radius:18px;
+      border:1px solid var(--stroke2);
+      background: linear-gradient(180deg, rgba(10,127,63,.06), rgba(255,255,255,.7));
+      overflow:hidden;
+    }
+    .mainImg{
+      width:100%;
+      height:auto;
+      display:block;
+      aspect-ratio: 4/3;
+      object-fit:contain;
+      background:#fff;
+      cursor:zoom-in;
+      transition: transform .25s ease;
+    }
+    .mainWrap:hover .mainImg{ transform: scale(1.01); }
+
+    .gridThumbs{
+      margin-top:12px;
+      display:grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap:10px;
+    }
+    @media(max-width:520px){
+      .gridThumbs{grid-template-columns: repeat(3, 1fr)}
+    }
+    .thumb{
+      border-radius:16px;
+      border:1px solid var(--stroke);
+      background: #fff;
+      padding:6px;
+      cursor:pointer;
+      transition:.12s transform ease, .12s border-color ease, .12s box-shadow ease;
+    }
+    .thumb:hover{transform:translateY(-1px); border-color: rgba(10,127,63,.35); box-shadow: 0 10px 18px rgba(2,6,23,.06)}
+    .thumb.active{border-color: rgba(10,127,63,.60)}
+    .thumb img{
+      width:100%;
+      aspect-ratio: 1/1;
+      border-radius:12px;
+      object-fit:cover;
+      display:block;
+      background:#fff;
+    }
+
+    /* Price */
+    .priceBar{
+      margin-top:12px;
+      padding:12px;
+      border-radius:18px;
+      border:1px solid rgba(10,127,63,.22);
+      background: linear-gradient(135deg, rgba(10,127,63,.10), rgba(16,185,129,.08));
+      display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+    }
+    .pNow{font-weight:900;font-size:24px}
+    .pWas{color:var(--muted2);text-decoration:line-through;font-size:13px}
+    .pSave{color:#0f766e;font-weight:800;font-size:13px}
+    .off{
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(245,158,11,.25);
+      background: rgba(245,158,11,.12);
+      color:#92400e;
+      font-weight:900;
+      font-size:13px;
+      white-space:nowrap;
+    }
+
+    /* Info */
+    h1{margin:0 0 10px;font-size:28px;line-height:1.25}
+    .sub{margin:0;color:var(--muted);line-height:1.9;font-size:15px}
+    .badgeRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .badge{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:9px 12px;border-radius:999px;
+      border:1px solid var(--stroke);
+      background: rgba(2,6,23,.03);
+      font-size:13px;
+      color: var(--muted);
+    }
+    .badge b{color:var(--text)}
+
+    .section{margin:16px 0}
+    .sectionTitle{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+    .sectionTitle h2{margin:0;font-size:18px}
+    .hint{color:var(--muted2);font-size:13px}
+
+    .cols{
+      display:grid;gap:12px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media(max-width:980px){ .cols{grid-template-columns:1fr} }
+
+    .feat{
+      padding:14px;
+      border-radius:18px;
+      border:1px solid var(--stroke);
+      background: var(--card2);
+    }
+    .featTop{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+    .ico{
+      width:38px;height:38px;border-radius:16px;
+      display:grid;place-items:center;
+      background: rgba(10,127,63,.10);
+      border:1px solid rgba(10,127,63,.18);
+      box-shadow: 0 10px 20px rgba(10,127,63,.10);
+      font-style:normal;
+    }
+    .feat b{font-size:15px}
+    .feat p{margin:0;color:var(--muted);line-height:1.85;font-size:14px}
+
+    /* Original */
+    .original{
+      padding:14px;
+      border-radius:18px;
+      border:1px solid rgba(16,185,129,.20);
+      background: linear-gradient(135deg, rgba(16,185,129,.10), rgba(255,255,255,.85));
+      display:flex;gap:12px;align-items:flex-start;
+    }
+    .original .mark{
+      width:44px;height:44px;border-radius:18px;
+      display:grid;place-items:center;
+      background: rgba(16,185,129,.14);
+      border:1px solid rgba(16,185,129,.22);
+      flex:0 0 auto;
+      font-size:18px;
+    }
+    .original b{display:block;margin-bottom:4px}
+    .original small{color:var(--muted);line-height:1.8}
+
+    /* FAQ + Accordion */
+    details{
+      background: #fff;
+      border:1px solid var(--stroke);
+      border-radius:18px;
+      padding:12px 14px;
+    }
+    details+details{margin-top:10px}
+    summary{
+      cursor:pointer;
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      font-weight:900;
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    .ans{color:var(--muted);line-height:1.9;font-size:14px;margin-top:10px}
+
+    /* Reviews Accordion */
+    .reviewAcc summary{align-items:flex-start;}
+    .reviewAcc .rLine{
+      display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;
+      width:100%;
+    }
+    .reviewAcc .miniStars{color:#f59e0b;font-weight:900;letter-spacing:1px;font-size:13px;}
+    .reviewAcc .who{font-weight:900;}
+    .reviewAcc .time{color:var(--muted2);font-size:12px;}
+
+    /* Lightbox */
+    .lightbox{
+      position:fixed;inset:0;
+      background: rgba(2,6,23,.78);
+      display:none;
+      align-items:center;justify-content:center;
+      z-index:9999;
+      padding:18px;
+    }
+    .lightbox.open{display:flex}
+    .lbCard{
+      width:min(980px, 100%);
+      background:#0b1020;
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+      position:relative;
+    }
+    .lbTop{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+      padding:10px 12px;
+      color:#fff;
+      border-bottom:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.06);
+    }
+    .lbTop b{font-size:13px}
+    .lbClose{
+      border:0;
+      background: rgba(255,255,255,.10);
+      color:#fff;
+      border-radius:12px;
+      padding:8px 10px;
+      cursor:pointer;
+      font-weight:900;
+    }
+    .lbImg{
+      width:100%;
+      max-height: 78vh;
+      object-fit: contain;
+      display:block;
+      background:#0b1020;
+    }
+
+    .note{
+      color:var(--muted2);
+      font-size:13px;
+      line-height:1.9;
+      text-align:center;
+      padding:14px 0 22px;
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0; transform:translateY(14px)}
+      to{opacity:1; transform:none}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *{animation:none !important; transition:none !important}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="topbar">
+      <div class="inner">
+        <div class="brandBox">
+          <div class="logo">🧼</div>
+          <div class="brandText">
+            <b>To You</b>
+            <small>أصلي 100% • فحص قبل الشحن • تغليف شيك</small>
+          </div>
+        </div>
+
+        <div class="metaRow">
+          <span class="pill"><i>⭐</i> 4.9/5 • 20 تقييم</span>
+          <span class="pill"><i>✅</i> Original</span>
+          <span class="pill"><i>🚚</i> شحن سريع</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+
+      <!-- كارت الوصف (وفيه الصور فوق + السعر تحتها) -->
+      <div class="card">
+        <div class="pad">
+
+          <!-- صور المنتج فوق قبل الضمان مباشرة -->
+          <div class="gallery" style="padding:0;margin:0 0 10px">
+            <div class="mainWrap">
+              <img id="mainImgTop" class="mainImg"
+                   src="https://i.postimg.cc/2jKYnwTj/0000585.webp"
+                   alt="Vichy Normaderm Phytosolution"
+                   title="اضغط للتكبير" />
+            </div>
+
+            <div class="gridThumbs" aria-label="صور المنتج">
+              <div class="thumb active" data-src="https://i.postimg.cc/2jKYnwTj/0000585.webp">
+                <img src="https://i.postimg.cc/2jKYnwTj/0000585.webp" alt="صورة 1">
+              </div>
+              <div class="thumb" data-src="https://i.postimg.cc/2jKYnwTb/1000011782.jpg">
+                <img src="https://i.postimg.cc/2jKYnwTb/1000011782.jpg" alt="صورة 2">
+              </div>
+              <div class="thumb" data-src="https://i.postimg.cc/jqFTyXvL/267770908_2152554591569237_3616015382339263836_n.jpg">
+                <img src="https://i.postimg.cc/jqFTyXvL/267770908_2152554591569237_3616015382339263836_n.jpg" alt="صورة 3">
+              </div>
+              <div class="thumb" data-src="https://i.postimg.cc/v8Ny5zXm/ee48ca67_7382_448b_8279_c82fce8cc270.avif">
+                <img src="https://i.postimg.cc/v8Ny5zXm/ee48ca67_7382_448b_8279_c82fce8cc270.avif" alt="صورة 4">
+              </div>
+              <div class="thumb" data-src="https://i.postimg.cc/xj4QLRgN/item_1713655028_2.jpg">
+                <img src="https://i.postimg.cc/xj4QLRgN/item_1713655028_2.jpg" alt="صورة 5">
+              </div>
+            </div>
+
+            <!-- السعر تحت الصور مباشرة -->
+            <div class="priceBar" aria-label="السعر">
+              <div>
+                <div class="pNow">879 جنيه</div>
+                <div class="pWas">بدل 950 جنيه</div>
+                <div class="pSave" id="saveTxt">وفّرت: — جنيه</div>
+              </div>
+              <div class="off" id="offTxt">خصم —%</div>
+            </div>
+
+            <div class="note" style="padding:10px 0 0">
+              ⭐ ملاحظة: النتائج بتختلف من بشرة للتانية حسب الروتين والالتزام.
+            </div>
+          </div>
+
+          <h1>Vichy Normaderm Phytosolution 💚<br>غسول علاجي للبشرة الدهنية</h1>
+          <p class="sub">
+            تنظيف عميق للمسام + تقليل الإفرازات الدهنية + دعم ضد الحبوب وآثارها.
+            مناسب للبشرة الدهنية والحساسة—من غير إحساس بالجفاف أو الشد.
+          </p>
+
+          <div class="badgeRow">
+            <span class="badge"><b>🧪</b> ساليسيليك + زنك</span>
+            <span class="badge"><b>🧼</b> تنظيف عميق</span>
+            <span class="badge"><b>💚</b> مناسب للحساسة</span>
+            <span class="badge"><b>✨</b> ملمس أنعم</span>
+          </div>
+
+          <!-- ضمان الأصالة (بعد الصور مباشرة) -->
+          <div class="section" style="margin-top:14px">
+            <div class="original">
+              <div class="mark">🛡️</div>
+              <div>
+                <b>ضمان الأصالة Original 100%</b>
+                <small>
+                  المنتج أصلي ومضمون 100% — توريد موثوق + فحص قبل الشحن.
+                  لو في أي مشكلة في المنتج/التغليف تواصل معانا فورًا.
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="sectionTitle">
+              <h2>المكونات البارزة</h2>
+              <span class="hint">تركيبة مناسبة للبشرة الدهنية</span>
+            </div>
+
+            <div class="cols">
+              <div class="feat">
+                <div class="featTop"><i class="ico">🧪</i><b>حمض الساليسيليك</b></div>
+                <p>يساعد على تنظيف المسام وتقليل مظهر الحبوب والرؤوس السوداء.</p>
+              </div>
+              <div class="feat">
+                <div class="featTop"><i class="ico">⚡</i><b>الزنك</b></div>
+                <p>يساعد على تقليل الإفرازات الدهنية ولمعان البشرة.</p>
+              </div>
+              <div class="feat">
+                <div class="featTop"><i class="ico">💧</i><b>معادن فيشي</b></div>
+                <p>دعم حاجز البشرة وتهدئة الإحساس بعد التنظيف.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="sectionTitle">
+              <h2>روتين الاستخدام</h2>
+              <span class="hint">أفضل نتيجة مع الاستمرار</span>
+            </div>
+
+            <div class="cols">
+              <div class="feat">
+                <div class="featTop"><i class="ico">🌞</i><b>صباحًا</b></div>
+                <p>على بشرة مبللة، دلكي 30–40 ثانية ثم اشطفي. بعدها مرطب خفيف + واقي شمس.</p>
+              </div>
+              <div class="feat">
+                <div class="featTop"><i class="ico">🌙</i><b>مساءً</b></div>
+                <p>كرري نفس الخطوات. لو بتستخدمي علاجات للحبوب، ضعيها بعد التنشيف.</p>
+              </div>
+              <div class="feat">
+                <div class="featTop"><i class="ico">✅</i><b>نصيحة</b></div>
+                <p>ابدئي مرة يوميًا لو بشرتك حساسة جدًا، ثم زودي تدريجيًا.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="sectionTitle">
+              <h2>ليه تشتري من متجرنا؟</h2>
+              <span class="hint">تجربة شراء مريحة</span>
+            </div>
+
+            <div class="cols">
+              <div class="feat">
+                <div class="featTop"><i class="ico">✅</i><b>أصلي 100%</b></div>
+                <p>مصدر موثوق + ضمان أصالة + فحص قبل الشحن.</p>
+              </div>
+              <div class="feat">
+                <div class="featTop"><i class="ico">📦</i><b>تغليف آمن</b></div>
+                <p>تغليف شيك يحافظ على المنتج أثناء النقل.</p>
+              </div>
+              <div class="feat">
+                <div class="featTop"><i class="ico">🚚</i><b>شحن سريع</b></div>
+                <p>توصيل سريع حسب منطقتك (غالبًا 24–72 ساعة).</p>
+              </div>
+            </div>
+
+            <!-- مكان فورم EasyOrders -->
+            <!-- الصقي هنا كود الفورم بتاعك -->
+          </div>
+
+        </div>
+      </div>
+
+      <!-- الكارت الثاني (ممكن تسيبه كـ مساحة CTA / أو تحط مزايا) -->
+      <div class="card">
+        <div class="pad">
+          <div class="sectionTitle">
+            <h2>لماذا المنتج ده مميز؟</h2>
+            <span class="hint">نتيجة أفضل مع روتين ثابت</span>
+          </div>
+
+          <div class="cols" style="grid-template-columns:1fr;gap:12px">
+            <div class="feat">
+              <div class="featTop"><i class="ico">🧼</i><b>تنضيف عميق بدون قسوة</b></div>
+              <p>بيساعد على إزالة الدهون والأوساخ من غير ما يسبب شد مزعج للبشرة.</p>
+            </div>
+            <div class="feat">
+              <div class="featTop"><i class="ico">✨</i><b>مظهر مسام أنضف</b></div>
+              <p>مع الاستمرار، بتلاحظي مسام أنضف ولمعان أقل خلال اليوم.</p>
+            </div>
+            <div class="feat">
+              <div class="featTop"><i class="ico">💚</i><b>مناسب للحساسة</b></div>
+              <p>اختيار ممتاز للبشرة الدهنية اللي بتتعب من الغسولات القاسية.</p>
+            </div>
+          </div>
+
+          <div class="section" style="margin-top:14px">
+            <div class="original">
+              <div class="mark">✅</div>
+              <div>
+                <b>جاهز للطلب الآن</b>
+                <small>الصقي فورم EasyOrders هنا لو تحبي يكون في كارت لوحده.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- مكان فورم إضافي (اختياري) -->
+          <!-- الصقي هنا كود الفورم لو عايزاه في الكارت ده -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Reviews Accordion -->
+    <section class="section card pad" id="reviews">
+      <div class="sectionTitle">
+        <h2>تقييمات العملاء ⭐</h2>
+        <span class="hint">4.9/5 • مبني على 20 تقييم</span>
+      </div>
+
+      <details class="reviewAcc" open>
+        <summary>
+          <div class="rLine">
+            <span class="who">سارة</span>
+            <span class="miniStars">★★★★★</span>
+            <span class="time">من 6 أيام</span>
+          </div>
+          <span>▾</span>
+        </summary>
+        <div class="ans">فرق معايا في الدهون من أول أسبوع… وبشرتي بقت أهدى.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">مريم</span><span class="miniStars">★★★★★</span><span class="time">من أسبوع</span></div><span>▾</span></summary>
+        <div class="ans">بيغسل كويس من غير ما ينشف… ده كان أهم حاجة عندي.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">نهى</span><span class="miniStars">★★★★★</span><span class="time">من 10 أيام</span></div><span>▾</span></summary>
+        <div class="ans">المسام بقت أنضف والملمس أنعم مع الاستمرار.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">هبة</span><span class="miniStars">★★★★★</span><span class="time">من أسبوعين</span></div><span>▾</span></summary>
+        <div class="ans">المنتج أصلي والتغليف محترم جدًا… شكراً.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">دينا</span><span class="miniStars">★★★★★</span><span class="time">من 12 يوم</span></div><span>▾</span></summary>
+        <div class="ans">ريحت الحبوب أقل ووشي بقى أقل لمعان طول اليوم.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">ريم</span><span class="miniStars">★★★★★</span><span class="time">من 8 أيام</span></div><span>▾</span></summary>
+        <div class="ans">حلو جدًا للبشرة الدهنية… مش بيعمل شد.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">آية</span><span class="miniStars">★★★★★</span><span class="time">من أسبوع</span></div><span>▾</span></summary>
+        <div class="ans">بقيت أستخدمه يوميًا… وفعلاً حسّيت بفرق.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">ياسمين</span><span class="miniStars">★★★★★</span><span class="time">من 5 أيام</span></div><span>▾</span></summary>
+        <div class="ans">الريحة خفيفة وتنضيفه قوي من غير تهيّج.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">شيماء</span><span class="miniStars">★★★★★</span><span class="time">من 9 أيام</span></div><span>▾</span></summary>
+        <div class="ans">ممتاز… دهون أقل بكتير.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">بسملة</span><span class="miniStars">★★★★★</span><span class="time">من 3 أسابيع</span></div><span>▾</span></summary>
+        <div class="ans">الجلد بقى أنضف وحسيت إن الحبوب بتقل.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">أسماء</span><span class="miniStars">★★★★★</span><span class="time">من أسبوعين</span></div><span>▾</span></summary>
+        <div class="ans">من أحسن غسولات فيشي اللي جربتها.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">نور</span><span class="miniStars">★★★★★</span><span class="time">من أسبوع</span></div><span>▾</span></summary>
+        <div class="ans">بيشيل الأوساخ كويس جدًا خصوصًا بعد الخروج.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">سلمى</span><span class="miniStars">★★★★★</span><span class="time">من 4 أيام</span></div><span>▾</span></summary>
+        <div class="ans">ممتاز للبشرة الحساسة عندي… مفيش احمرار.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">هاجر</span><span class="miniStars">★★★★★</span><span class="time">من 6 أيام</span></div><span>▾</span></summary>
+        <div class="ans">نتيجته محترمة جدًا مع مرطب خفيف.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">منه</span><span class="miniStars">★★★★★</span><span class="time">من أسبوعين</span></div><span>▾</span></summary>
+        <div class="ans">بشرتي بقت أقل لمعان… حلو قوي.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">رحمة</span><span class="miniStars">★★★★★</span><span class="time">من 10 أيام</span></div><span>▾</span></summary>
+        <div class="ans">شحن سريع وخدمة محترمة.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">إسراء</span><span class="miniStars">★★★★★</span><span class="time">من 3 أسابيع</span></div><span>▾</span></summary>
+        <div class="ans">ممتاز قبل المكياج… بيخلّي البشرة أنضف.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">رنا</span><span class="miniStars">★★★★★</span><span class="time">من أسبوعين</span></div><span>▾</span></summary>
+        <div class="ans">واضح إنه أصلي… فرق في المسام.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">جنى</span><span class="miniStars">★★★★★</span><span class="time">من أسبوع</span></div><span>▾</span></summary>
+        <div class="ans">حلو جدًا… وناعم على البشرة.</div>
+      </details>
+
+      <details class="reviewAcc">
+        <summary><div class="rLine"><span class="who">ليلى</span><span class="miniStars">★★★★★</span><span class="time">من 5 أيام</span></div><span>▾</span></summary>
+        <div class="ans">اشتريته تاني… بقى أساسي عندي.</div>
+      </details>
+    </section>
+
+    <!-- FAQ (النسخة التسويقية 6 أسئلة) -->
+    <section class="section card pad" id="faq">
+      <div class="sectionTitle">
+        <h2>أسئلة شائعة</h2>
+        <span class="hint">إجابات تقنع وتطمن</span>
+      </div>
+
+      <details open>
+        <summary>لو بشرتي دهنية وحساسة… ينفع فعلًا؟ <span>▾</span></summary>
+        <div class="ans">ينفع جدًا—مصمم للبشرة الدهنية والحساسة: <b>تنضيف قوي + بدون شد</b> عشان تكملي روتينك براحة.</div>
+      </details>
+
+      <details>
+        <summary>هيفرق مع الحبوب والدهون قد إيه؟ <span>▾</span></summary>
+        <div class="ans">مع الاستمرار هتلاحظي <b>دهون أقل + مسام أنضف</b> وتقليل تدريجي في مظهر الحبوب وآثارها.</div>
+      </details>
+
+      <details>
+        <summary>هل هينشف وشي زي غسولات كتير؟ <span>▾</span></summary>
+        <div class="ans">لا—تنضيفه عميق بس <b>مش قاسي</b>. ومع مرطب خفيف هتحسي براحة ونعومة أكتر.</div>
+      </details>
+
+      <details>
+        <summary>أستخدمه إزاي عشان آخد أفضل نتيجة؟ <span>▾</span></summary>
+        <div class="ans"><b>مرتين يوميًا</b> 30–40 ثانية تدليك لطيف. بعدها مرطب خفيف، وصبحًا واقي شمس.</div>
+      </details>
+
+      <details>
+        <summary>ينفع مع علاجات الحبوب/الروتين؟ <span>▾</span></summary>
+        <div class="ans">أيوه، ينفع جدًا. لو عندك ريتينول/مقشرات قوية استخدميه بتدرّج لو حصل جفاف.</div>
+      </details>
+
+      <details>
+        <summary>إزاي أطمن إنه أصلي 100%؟ <span>▾</span></summary>
+        <div class="ans"><b>مضمون Original 100%</b> ✅ توريد موثوق + فحص قبل الشحن + تغليف آمن—ولو أي مشكلة كلمينا فورًا.</div>
+      </details>
+    </section>
+
+    <div class="note">
+      ⚠️ النتائج تختلف من شخص للتاني حسب طبيعة البشرة والالتزام بالروتين.  
+      لو ظهر تهيّج/حساسية: أوقفي الاستخدام واستشيري مختص.
+    </div>
+
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lbCard" role="dialog" aria-label="عرض الصورة">
+      <div class="lbTop">
+        <b>تكبير الصورة</b>
+        <button class="lbClose" id="lbClose" type="button">✕ إغلاق</button>
+      </div>
+      <img id="lbImg" class="lbImg" src="" alt="صورة مكبرة">
+    </div>
+  </div>
+
+  <script>
+    // ===== Prices =====
+    const PRICE_WAS = 950;
+    const PRICE_NOW = 879;
+
+    (function calcDiscount(){
+      const save = Math.max(0, PRICE_WAS - PRICE_NOW);
+      const off = (PRICE_WAS > 0) ? Math.round((save / PRICE_WAS) * 100) : 0;
+      const saveTxt = document.getElementById('saveTxt');
+      const offTxt = document.getElementById('offTxt');
+      if(saveTxt) saveTxt.textContent = "وفّرت: " + save.toFixed(0) + " جنيه";
+      if(offTxt) offTxt.textContent = "خصم " + off + "%";
+    })();
+
+    // ===== Gallery swap + active (Top) =====
+    const mainImgTop = document.getElementById('mainImgTop');
+    const thumbs = document.querySelectorAll('.thumb');
+
+    thumbs.forEach(t=>{
+      t.addEventListener('click', ()=>{
+        const src = t.getAttribute('data-src');
+        if(src && mainImgTop){
+          mainImgTop.src = src;
+          thumbs.forEach(x=>x.classList.remove('active'));
+          t.classList.add('active');
+        }
+      });
+    });
+
+    // ===== Lightbox (click main image) =====
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const lbClose = document.getElementById('lbClose');
+
+    function openLB(src){
+      if(!lb || !lbImg) return;
+      lbImg.src = src;
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLB(){
+      if(!lb) return;
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+    }
+
+    if(mainImgTop){
+      mainImgTop.addEventListener('click', ()=> openLB(mainImgTop.src));
+    }
+    if(lbClose) lbClose.addEventListener('click', closeLB);
+    if(lb){
+      lb.addEventListener('click', (e)=>{
+        if(e.target === lb) closeLB();
+      });
+    }
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape') closeLB();
+    });
+  </script>
+</body>
+</html>
