@@ -141,7 +141,7 @@
     .gridThumbs{
       margin-top:12px;
       display:grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr); /* Updated for 6 images */
       gap:10px;
     }
     @media(max-width:520px){
@@ -250,7 +250,7 @@
       flex:0 0 auto;
       font-size:18px;
     }
-    .original b{display:block;margin-bottom:4px}
+    .original b{display:block;margin-bottom:4px;color:#047857;}
     .original small{color:var(--muted);line-height:1.8}
 
     /* FAQ + Accordion */
@@ -357,7 +357,7 @@
 
         <div class="metaRow">
           <span class="pill"><i>⭐</i> 4.9/5 • 20 تقييم</span>
-          <span class="pill"><i>✅</i> Original</span>
+          <span class="pill" style="color:#047857; font-weight:bold; background:rgba(16,185,129,.1);"><i>✅</i> Original 100%</span>
           <span class="pill"><i>🚚</i> شحن سريع</span>
         </div>
       </div>
@@ -365,42 +365,42 @@
 
     <section class="hero">
 
-      <!-- كارت الوصف (وفيه الصور فوق + السعر تحتها) -->
       <div class="card">
         <div class="pad">
 
-          <!-- صور المنتج فوق قبل الضمان مباشرة -->
           <div class="gallery" style="padding:0;margin:0 0 10px">
             <div class="mainWrap">
               <img id="mainImgTop" class="mainImg"
-                   src="https://i.postimg.cc/2jKYnwTj/0000585.webp"
+                   src="https://i.postimg.cc/C5ZRjXQp/0000585.webp"
                    alt="Vichy Normaderm Phytosolution"
                    title="اضغط للتكبير" />
             </div>
 
             <div class="gridThumbs" aria-label="صور المنتج">
-              <div class="thumb active" data-src="https://i.postimg.cc/2jKYnwTj/0000585.webp">
-                <img src="https://i.postimg.cc/2jKYnwTj/0000585.webp" alt="صورة 1">
+              <div class="thumb active" data-src="https://i.postimg.cc/C5ZRjXQp/0000585.webp">
+                <img src="https://i.postimg.cc/C5ZRjXQp/0000585.webp" alt="صورة 1">
               </div>
-              <div class="thumb" data-src="https://i.postimg.cc/2jKYnwTb/1000011782.jpg">
-                <img src="https://i.postimg.cc/2jKYnwTb/1000011782.jpg" alt="صورة 2">
+              <div class="thumb" data-src="https://i.postimg.cc/nrsXvgPt/0000586.webp">
+                <img src="https://i.postimg.cc/nrsXvgPt/0000586.webp" alt="صورة 2">
               </div>
-              <div class="thumb" data-src="https://i.postimg.cc/jqFTyXvL/267770908_2152554591569237_3616015382339263836_n.jpg">
-                <img src="https://i.postimg.cc/jqFTyXvL/267770908_2152554591569237_3616015382339263836_n.jpg" alt="صورة 3">
+              <div class="thumb" data-src="https://i.postimg.cc/904DGKnV/1000011782.jpg">
+                <img src="https://i.postimg.cc/904DGKnV/1000011782.jpg" alt="صورة 3">
               </div>
-              <div class="thumb" data-src="https://i.postimg.cc/v8Ny5zXm/ee48ca67_7382_448b_8279_c82fce8cc270.avif">
-                <img src="https://i.postimg.cc/v8Ny5zXm/ee48ca67_7382_448b_8279_c82fce8cc270.avif" alt="صورة 4">
+              <div class="thumb" data-src="https://i.postimg.cc/VvSJjpVz/item_1713655028_2.jpg">
+                <img src="https://i.postimg.cc/VvSJjpVz/item_1713655028_2.jpg" alt="صورة 4">
               </div>
-              <div class="thumb" data-src="https://i.postimg.cc/xj4QLRgN/item_1713655028_2.jpg">
-                <img src="https://i.postimg.cc/xj4QLRgN/item_1713655028_2.jpg" alt="صورة 5">
+              <div class="thumb" data-src="https://i.postimg.cc/WzQhS8Qx/Product_Size_44.webp">
+                <img src="https://i.postimg.cc/WzQhS8Qx/Product_Size_44.webp" alt="صورة 5">
+              </div>
+              <div class="thumb" data-src="https://i.postimg.cc/rsdDS3PT/1000011782_(1).jpg">
+                <img src="https://i.postimg.cc/rsdDS3PT/1000011782_(1).jpg" alt="صورة 6">
               </div>
             </div>
 
-            <!-- السعر تحت الصور مباشرة -->
             <div class="priceBar" aria-label="السعر">
               <div>
-                <div class="pNow">879 جنيه</div>
-                <div class="pWas">بدل 950 جنيه</div>
+                <div class="pNow">994 جنيه</div>
+                <div class="pWas">بدل 1250 جنيه</div>
                 <div class="pSave" id="saveTxt">وفّرت: — جنيه</div>
               </div>
               <div class="off" id="offTxt">خصم —%</div>
@@ -411,7 +411,7 @@
             </div>
           </div>
 
-          <h1>Vichy Normaderm Phytosolution 💚<br>غسول علاجي للبشرة الدهنية</h1>
+          <h1 style="font-size:26px">Vichy Normaderm Phytosolution 💚<br>غسول علاجي للبشرة الدهنية (أصلي 100%)</h1>
           <p class="sub">
             تنظيف عميق للمسام + تقليل الإفرازات الدهنية + دعم ضد الحبوب وآثارها.
             مناسب للبشرة الدهنية والحساسة—من غير إحساس بالجفاف أو الشد.
@@ -424,7 +424,6 @@
             <span class="badge"><b>✨</b> ملمس أنعم</span>
           </div>
 
-          <!-- ضمان الأصالة (بعد الصور مباشرة) -->
           <div class="section" style="margin-top:14px">
             <div class="original">
               <div class="mark">🛡️</div>
@@ -503,14 +502,11 @@
               </div>
             </div>
 
-            <!-- مكان فورم EasyOrders -->
-            <!-- الصقي هنا كود الفورم بتاعك -->
-          </div>
+            </div>
 
         </div>
       </div>
 
-      <!-- الكارت الثاني (ممكن تسيبه كـ مساحة CTA / أو تحط مزايا) -->
       <div class="card">
         <div class="pad">
           <div class="sectionTitle">
@@ -543,14 +539,11 @@
             </div>
           </div>
 
-          <!-- مكان فورم إضافي (اختياري) -->
-          <!-- الصقي هنا كود الفورم لو عايزاه في الكارت ده -->
-        </div>
+          </div>
       </div>
 
     </section>
 
-    <!-- Reviews Accordion -->
     <section class="section card pad" id="reviews">
       <div class="sectionTitle">
         <h2>تقييمات العملاء ⭐</h2>
@@ -665,7 +658,6 @@
       </details>
     </section>
 
-    <!-- FAQ (النسخة التسويقية 6 أسئلة) -->
     <section class="section card pad" id="faq">
       <div class="sectionTitle">
         <h2>أسئلة شائعة</h2>
@@ -710,7 +702,6 @@
 
   </div>
 
-  <!-- Lightbox -->
   <div id="lightbox" class="lightbox" aria-hidden="true">
     <div class="lbCard" role="dialog" aria-label="عرض الصورة">
       <div class="lbTop">
@@ -723,8 +714,8 @@
 
   <script>
     // ===== Prices =====
-    const PRICE_WAS = 950;
-    const PRICE_NOW = 879;
+    const PRICE_WAS = 1250;
+    const PRICE_NOW = 994;
 
     (function calcDiscount(){
       const save = Math.max(0, PRICE_WAS - PRICE_NOW);
