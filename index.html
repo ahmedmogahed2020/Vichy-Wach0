@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
@@ -399,8 +400,11 @@
 
             <div class="priceBar" aria-label="السعر">
               <div>
-                <div class="pNow">994 جنيه</div>
-               
+                <div class="pNow">989 جنيه</div>
+                <div class="pWas">بدل 1250 جنيه</div>
+                <div class="pSave" id="saveTxt">وفّرت: — جنيه</div>
+              </div>
+              <div class="off" id="offTxt">خصم —%</div>
             </div>
 
             <div class="note" style="padding:10px 0 0">
@@ -712,7 +716,7 @@
   <script>
     // ===== Prices =====
     const PRICE_WAS = 1250;
-    const PRICE_NOW = 994;
+    const PRICE_NOW = 989;
 
     (function calcDiscount(){
       const save = Math.max(0, PRICE_WAS - PRICE_NOW);
